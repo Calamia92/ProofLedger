@@ -40,14 +40,54 @@ Exemples :
 - `chore(docker): add MinIO service`
 - `docs(readme): update getting started`
 
+## Mettre à jour sa branche avec main
+
+Pendant que tu travailles sur ta branche, d'autres PR peuvent être mergées dans `main`. Pour éviter les conflits au moment de ta PR, mets ta branche à jour régulièrement :
+
+```bash
+# 1. Récupérer les dernières modifs de main
+git fetch origin
+
+# 2. Se placer sur sa branche
+git checkout feat/ma-feature
+
+# 3. Rebaser sa branche sur main
+git rebase origin/main
+```
+
+### En cas de conflits pendant le rebase
+
+```bash
+# Git va te montrer les fichiers en conflit
+# 1. Ouvre les fichiers marqués et résous les conflits (cherche les marqueurs <<<<<<< / ======= / >>>>>>>)
+# 2. Une fois résolu, ajoute les fichiers
+git add <fichier-résolu>
+
+# 3. Continue le rebase
+git rebase --continue
+
+# Si c'est trop le bazar et que tu veux annuler le rebase
+git rebase --abort
+```
+
+### Après le rebase
+
+```bash
+# Ton historique local a changé, il faut force push ta branche
+git push --force-with-lease origin feat/ma-feature
+```
+
+> `--force-with-lease` est plus sûr que `--force` : il vérifie que personne d'autre n'a pushé sur ta branche entre-temps.
+
 ## Pull Requests
 
 1. Crée ta branche depuis `main` à jour : `git checkout -b feat/ma-feature main`
 2. Fais tes commits en suivant la convention
-3. Push ta branche : `git push -u origin feat/ma-feature`
-4. Ouvre une PR vers `main` en utilisant le template
-5. Demande une review à au moins **1 membre** de l'équipe
-6. Merge après approbation (squash merge recommandé)
+3. **Mets ta branche à jour** avec `main` avant de push (voir section ci-dessus)
+4. Push ta branche : `git push -u origin feat/ma-feature`
+5. Ouvre une PR vers `main` en utilisant le template
+6. Demande une review à au moins **1 membre** de l'équipe
+7. Merge après approbation (squash merge recommandé)
 
 ## Code Review
 
