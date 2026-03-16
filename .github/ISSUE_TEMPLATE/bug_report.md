@@ -6,30 +6,14 @@ labels: bug
 assignees: ''
 ---
 
-## Description du bug
+## Description
 
-<!-- Description claire et concise du problème -->
+<!-- Qu'est-ce qui ne marche pas ? -->
 
-## Étapes pour reproduire
+## Comment reproduire
 
-1. Aller sur '...'
-2. Cliquer sur '...'
-3. Voir l'erreur
-
-## Comportement attendu
-
-<!-- Ce qui devrait se passer -->
-
-## Comportement actuel
-
-<!-- Ce qui se passe réellement -->
+1. ...
 
 ## Screenshots / Logs
 
 <!-- Si applicable -->
-
-## Environnement
-
-- OS :
-- Navigateur :
-- Version :

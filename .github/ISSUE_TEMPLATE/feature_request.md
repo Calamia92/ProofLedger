@@ -8,21 +8,8 @@ assignees: ''
 
 ## Description
 
-<!-- Description claire de la fonctionnalité souhaitée -->
-
-## Motivation
-
-<!-- Pourquoi cette fonctionnalité est nécessaire ? Quel problème résout-elle ? -->
-
-## Solution proposée
-
-<!-- Comment imagines-tu l'implémentation ? -->
+<!-- Qu'est-ce qu'on veut ajouter et pourquoi ? -->
 
 ## Critères d'acceptation
 
 - [ ] ...
-- [ ] ...
-
-## Milestone
-
-<!-- À quel milestone cette feature est rattachée ? -->
